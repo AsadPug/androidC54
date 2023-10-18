@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="40dp"
+    tools:context=".DebutFragment">
+
+    <EditText
+        android:id="@+id/champNom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Entrez nom"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/champPrenom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Entrez prénom"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Quel est votre objectif ? "
+        android:textSize="20sp" />
+
+    <RadioGroup
+        android:id="@+id/groupe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/bPerdreDuPoids"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Perdre du poids" />
+
+        <RadioButton
+            android:id="@+id/bEtreMeilleureSante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Etre en meilleure santé" />
+
+        <RadioButton
+            android:id="@+id/bGagnerMasse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gagner de la masse musculaire" />
+    </RadioGroup>
+
+</LinearLayout>
