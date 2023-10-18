@@ -82,8 +82,11 @@ public class SpotifyDiffuseur {
                         songName = track.name;
                         artistName = track.artist.name;
                     }
+                    //transforme les valeurs ms en secondes parce que la precision est inutile dans mon contexte
                     songProgress = (int)(playerState.playbackPosition/1000);
                     songDuration = (int)(track.duration/1000);
+
+                    //callback qd l'image va être loader
                     mSpotifyAppRemote.getImagesApi()
                     .getImage(playerState.track.imageUri).setResultCallback(bitmap -> {
                         coverImage = bitmap;
@@ -109,7 +112,6 @@ public class SpotifyDiffuseur {
     }
 
     //getters
-
     public String getSongName() {return songName;}
     public String getArtistName() {return artistName;}
     public int getSongProgress() {return songProgress;}
